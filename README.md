@@ -18,20 +18,20 @@ This hasn't yet been implemented for DigitalObjectComponents.
 
 ## Configuration
 
-By default it will produce display strings like pre v2.8.0 (only the first date
-and using expression or begin - end)
+By default it will produce display strings like v2.8.x (all dates
+concatenated with ',', using: [bulk] (expression | begin - end))
 
 This behavior can be changed in config like this:
 
 ```ruby
   AppConfig[:as_display_string_dates] = {
-    :selector => proc{|dates| dates},
+    :selector => proc{|dates| dates.first},
     :builder => proc{|date| date['begin']}
   }
 ```
 
 Where the `:selector` key allows you to determine which dates should be included
-in the display string (all of them in the example).
+in the display string (just the first in the example).
 
 And the `:builder` key allows you to override how a date is represented in the
 display string (just the begin date in the example).

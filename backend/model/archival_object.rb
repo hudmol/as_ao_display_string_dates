@@ -6,7 +6,7 @@ class ArchivalObject
                                      else
                                        {}
                                      end
-      @display_string_dates_config[:selector] ||= proc{|dates| dates.first}
+      @display_string_dates_config[:selector] ||= proc{|dates| dates}
 
       @display_string_dates_config[:builder] ||= proc{|date|
         [date['date_type'] == 'bulk' ? I18n.t("date_type_bulk.bulk") : nil,
