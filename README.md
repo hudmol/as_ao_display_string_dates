@@ -10,14 +10,10 @@ This is currently just a quick sketch developed against AS v2.8.1.
 ### Known Issues
 
 Whenever this plugin is installed or its configuration is changed it will be
-necessary to reindex all ArchivalObjects.
+necessary to update all ArchivalObjects. Should write a background job to
+do this.
 
 This hasn't yet been implemented for DigitalObjectComponents.
-
-It ignores the stored display_string, so if you uninstall this plugin it will
-just revert to using the stored one.
-
-There may be places in AS that rely on the stored display_string.
 
 
 ## Configuration
