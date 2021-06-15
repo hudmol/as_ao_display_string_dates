@@ -1,8 +1,8 @@
 class ArchivalObject
   def self.display_string_dates_config
     unless @display_string_dates_config
-      @display_string_dates_config = if AppConfig.has_key?(:as_ao_display_string_dates)
-                                       AppConfig[:as_ao_display_string_dates]
+      @display_string_dates_config = if AppConfig.has_key?(:as_display_string_dates)
+                                       AppConfig[:as_display_string_dates]
                                      else
                                        {}
                                      end
