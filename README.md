@@ -1,5 +1,5 @@
 
-# as_ao_display_string_dates
+# as_display_string_dates
 
 An ArchivesSpace plugin that makes the inclusion of dates in ArchivalObject
 display strings configurable.
@@ -24,7 +24,7 @@ and using expression or begin - end)
 This behavior can be changed in config like this:
 
 ```ruby
-  AppConfig[:as_ao_display_string_dates] = {
+  AppConfig[:as_display_string_dates] = {
     :selector => proc{|dates| dates},
     :builder => proc{|date| date['begin']}
   }
